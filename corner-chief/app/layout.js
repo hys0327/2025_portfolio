@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
                             </h1>
                             <ul className="menu-wrap">
                                 <li>
-                                    <Link href="./recipe/page">레시피</Link>
+                                    <Link href="/recipe">레시피</Link>
                                 </li>
                             </ul>
                         </div>
