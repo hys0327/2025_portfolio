@@ -1,0 +1,20 @@
+/* 공통 선택자 */
+.icon {
+    @apply flex items-center justify-center cursor-pointer;
+
+    &.w-6 {
+        @apply w-6 aspect-square;
+    }
+}
+
+
+/* flat-svg 색상 변경 https://codepen.io/sosuke/pen/Pjoqqp */
+.icon-noti {
+    background: no-repeat center/cover url("../public/images/icon-bell-fill.svg");
+    filter: invert(6%) sepia(3%) saturate(328%) hue-rotate(314deg) brightness(100%) contrast(83%);
+}
+
+.icon-login-fill {
+    background: no-repeat center/cover url("../public/images/icon-login-fill.svg");
+    filter: invert(6%) sepia(3%) saturate(328%) hue-rotate(314deg) brightness(100%) contrast(83%);
+}
