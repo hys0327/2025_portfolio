@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
         <html lang="ko">
             <body>
                 <div className="wrap">
-                    <header className="flex items-center justify-between px-4 py-2 bg-white drop-shadow-sm">
+                    {/* <header className="flex items-center justify-between px-4 py-2 bg-white drop-shadow-sm">
                         <div className="left flex items-center gap-x-12">
                             <h1>
                                 <Link href="/">
@@ -31,7 +31,8 @@ export default function RootLayout({ children }) {
                                 <div className="icon icon-login-fill w-6"></div>
                             </li>
                         </ul>
-                    </header>
+                    </header> */}
+                    dd
                     <main>{children}</main>
                     <footer></footer>
                 </div>
