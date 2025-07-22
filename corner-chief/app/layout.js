@@ -4,15 +4,15 @@ import "./globals.css";
 export default function RootLayout({ children }) {
     return (
         <html lang="ko">
-            <body>
-                <div className="wrap">
+            <body className="min-h-screen">
+                <div id="wrap">
                     <header className="flex items-center justify-between px-4 py-2 bg-white drop-shadow-sm">
                         <div className="left flex items-center gap-x-12">
                             <h1>
                                 <Link href="/">
                                     <img
                                         src="/images/logo.svg"
-                                        alt=""
+                                        alt="임시 로고"
                                         width={100}
                                     />
                                 </Link>

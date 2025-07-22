@@ -1,3 +1,14 @@
+/* 임시 */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #21252f;
+}
+
 /* 공통 선택자 */
 .icon {
     @apply flex items-center justify-center cursor-pointer;
@@ -6,7 +17,6 @@
         @apply w-6 aspect-square;
     }
 }
-
 
 /* flat-svg 색상 변경 https://codepen.io/sosuke/pen/Pjoqqp */
 .icon-noti {
@@ -17,4 +27,115 @@
 .icon-login-fill {
     background: no-repeat center/cover url("../public/images/icon-login-fill.svg");
     filter: invert(6%) sepia(3%) saturate(328%) hue-rotate(314deg) brightness(100%) contrast(83%);
+}
+
+/* 폰트 */
+
+.Label_R_ln {
+    /* font-size: 12px / font-weight: regular / line-height: normal */
+    @apply text-xs font-normal leading-normal;
+}
+
+.Caption_R_ln {
+    /* font-size: 14px / font-weight: regular / line-height: normal */
+    @apply text-sm font-normal leading-normal;
+}
+
+.Caption_B_ln {
+    /* font-size: 14px / font-weight: bold / line-height: normal */
+    @apply text-sm font-bold leading-normal;
+}
+
+.Body_R_ln {
+    /* font-size: 16px / font-weight: regular / line-height: normal */
+    @apply text-base font-normal leading-normal;
+}
+
+.Body_B_ln {
+    /* font-size: 16px / font-weight: bold / line-height: normal */
+    @apply text-base font-bold leading-normal;
+}
+
+.Subtitle_R_ln {
+    /* font-size: 20px / font-weight: regular / line-height: normal */
+    @apply text-xl font-normal leading-normal;
+}
+
+.Heading_R_ln {
+    /* font-size: 24px / font-weight: regular / line-height: normal */
+    @apply text-2xl font-normal leading-normal;
+}
+
+.Heading_B_ln {
+    /* font-size: 24px / font-weight: regular / line-height: normal */
+    @apply text-2xl font-bold leading-normal;
+}
+
+/* 그림자가 있는 swiper의 경우 */
+.swiper {
+    &.has-shadow {
+        .swiper-wrapper {
+            padding: 10px 0;
+        }
+    }
+}
+
+/* 뱃지 */
+.badge {
+    position: absolute;
+    left: 16px;
+    top: -6px;
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+    &.rank-1 {
+        @apply bg-amber-800;
+
+        .diagram {
+            @apply bg-amber-800;
+        }
+    }
+
+    &.rank-2 {
+        @apply bg-amber-500;
+
+        .diagram {
+            @apply bg-amber-500;
+        }
+    }
+
+    &.rank-3 {
+        @apply bg-emerald-600;
+
+        .diagram {
+            @apply bg-emerald-600;
+        }
+    }
+
+    >span {
+        position: relative;
+        z-index: 1;
+    }
+
+    .diagram {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        bottom: -7px;
+
+        &.d-left {
+            transform: rotate(25deg);
+            left: 4px;
+        }
+
+        &.d-right {
+            transform: rotate(-25deg);
+            right: 4px;
+        }
+    }
 }
