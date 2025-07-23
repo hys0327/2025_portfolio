@@ -8,6 +8,7 @@ import SwiperCore from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import MultiStepSelect from "./components/MultiStepSelect";
 
 export default function Home() {
     const chiefs = getTopChiefs();
@@ -83,7 +84,7 @@ export default function Home() {
             <section className="row mb-14">
                 <h3 className="Heading_B_ln mb-5 flex gap-x-2">
                     <span>최신 레시피</span>
-                    <span>🧈</span>
+                    <span>📜</span>
                 </h3>
                 <ul className="grid grid-cols-4 gap-x-4">
                     {recipes.map((recipe, idx) => (
@@ -103,15 +104,35 @@ export default function Home() {
                     ))}
                 </ul>
             </section>
-            <section className="row bg-gray-100 py-14">
+            <section className="row py-14 mb-14 has-bg-gray">
                 <h3 className="Heading_B_ln mb-5 flex gap-x-2">
                     <span>방구석 PICK</span>
                     <span>📌</span>
                 </h3>
-                {/* 
-                    사용자가 작성한 레시피 관련 게시글의 내용 중, 가장 많이 언급된 요리 재료, 조리 도구, 웹사이트 주소(대표 도메인만 추출해야함)를 보여줘야 함
-                    더미데이터를 어떻게 구성할지 감이 안와서 나중으로 미룸. 25-07-22
-                */}
+                <MultiStepSelect />
+            </section>
+            <section className="row py-14 mb-14 has-bg-navy">
+                <div className="text-wrap flex flex-col items-center mb-5 text-white">
+                    <h3 className="Heading_B_ln mb-2.5">
+                        지금 방구석 요리사에 등록하세요
+                    </h3>
+                    <p>이달의 요리사 3종에 선정되면</p>
+                    <p>매월 총 200만원의 셰프 지원금이 지급됩니다.</p>
+                </div>
+                <div className="link-wrap flex items-center justify-center">
+                    <Link
+                        href="/"
+                        className="Body_B_ln border border-white py-2.5 px-6 text-white rounded-full hover:bg-white hover:text-inherit transition-all"
+                    >
+                        등록하러 가기
+                    </Link>
+                </div>
+            </section>
+            <section className="row mb-14">
+                <h3 className="Heading_B_ln mb-5 flex gap-x-2">
+                    <span>방구석 SHORTS</span>
+                    <span>🎬</span>
+                </h3>
             </section>
         </div>
     );

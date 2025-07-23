@@ -17,9 +17,12 @@ export default function RootLayout({ children }) {
                                     />
                                 </Link>
                             </h1>
-                            <ul className="menu-wrap">
+                            <ul className="menu-wrap flex items-center gap-x-10">
                                 <li>
                                     <Link href="/recipe">레시피</Link>
+                                </li>
+                                <li>
+                                    <Link href="/channel">요리사 채널</Link>
                                 </li>
                             </ul>
                         </div>

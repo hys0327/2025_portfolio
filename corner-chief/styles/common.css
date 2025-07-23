@@ -139,3 +139,175 @@ body {
         }
     }
 }
+
+/* 커스텀 선택상자 */
+.custom-select {
+    display: flex;
+    position: relative;
+
+    .select-trigger {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 10px;
+        padding: 10px 20px;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: all 0.2s;
+        user-select: none;
+        @apply bg-black;
+
+        /* &.active {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        } */
+
+        .selected-text {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .select-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+
+            svg {
+                transition: transform 0.2s;
+
+                &.rotated {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    .select-dropdown {
+        position: absolute;
+        top: calc(100% + 6px);
+        left: 0;
+        right: 0;
+        background: white;
+        z-index: 1000;
+        display: none;
+        margin-top: -1px;
+        user-select: none;
+        max-height: 308px;
+        overflow-y: auto;
+        padding-right: 4px;
+
+        @apply drop-shadow-lg;
+
+        &::-webkit-scrollbar {
+            width: 14px;
+            background: #ffffff;
+            border-radius: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+            margin: 4px 0;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #c9cbd1;
+            border-radius: 10px;
+            /* border를 활용하여, 스크롤 요소 위치 조정 */
+            border: 3px solid transparent;
+            background-clip: content-box;
+        }
+
+        &.show {
+            display: block;
+        }
+
+        .select-option {
+            padding: 11px 12px;
+            cursor: pointer;
+            border-bottom: 1px solid #ebecf0;
+            font-family: 'Pretendard', sans-serif;
+            color: #21252f;
+            font-size: 14px;
+            font-weight: 400;
+            /* white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden; */
+
+            &:has(img) {
+                display: flex;
+                align-items: center;
+                column-gap: 20px;
+                padding: 8px 20px;
+
+                img {
+                    width: 60px;
+                }
+            }
+
+            &:last-child {
+                border-bottom: 0;
+            }
+
+            &:hover {
+                background: #f7f7f9;
+            }
+
+            &.selected {
+                background: #f8fcfc;
+                color: #55aaba;
+                font-weight: 700;
+            }
+
+            &.placeholder {
+                color: #8a8e99;
+                display: none;
+            }
+        }
+    }
+
+    .hidden-select {
+        display: none;
+    }
+}
+
+.row-wrap {
+    .row {
+        &.has-bg-gray {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100vw;
+                height: 100%;
+                margin-left: calc((-100vw + 100%) / 2 - 9px);
+                z-index: -1;
+                @apply bg-gray-100;
+            }
+        }
+
+        &.has-bg-navy {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100vw;
+                height: 100%;
+                margin-left: calc((-100vw + 100%) / 2 - 9px);
+                z-index: -1;
+                @apply bg-sky-900;
+            }
+        }
+    }
+}
+
+.accent-text {
+    font-family: 'Paperlogy', 'Pretendard', sans-serif;
+}

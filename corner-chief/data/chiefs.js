@@ -5,6 +5,8 @@ export const allChiefs = [
         description: "자연을 담은 요리를 지향합니다.",
         imageUrl: "/images/users/profile_1.webp",
         score: 95,
+        follow: 3650,
+        post: 1172,
     },
     {
         id: 2,
@@ -12,13 +14,16 @@ export const allChiefs = [
         description: "혼밥족에게 따뜻한 한 끼를 선사합니다.",
         imageUrl: "/images/users/profile_2.webp",
         score: 87,
+        follow: 2875,
+        post: 1036,
     },
     {
         id: 3,
         name: "정하늘",
         description: "한식의 세계화를 꿈꿉니다.",
         imageUrl: "/images/users/profile_3.webp",
-        score: 99,
+        follow: 2236,
+        post: 972,
     },
     {
         id: 4,
@@ -26,6 +31,8 @@ export const allChiefs = [
         description: "양식에 한식의 풍미를 담는 퓨전요리사입니다.",
         imageUrl: "/images/users/profile_4.webp",
         score: 77,
+        follow: 1650,
+        post: 934,
     },
     {
         id: 5,
@@ -33,6 +40,8 @@ export const allChiefs = [
         description: "건강식을 재미있게 만드는 레시피를 연구합니다.",
         imageUrl: "/images/users/profile_5.webp",
         score: 82,
+        follow: 1453,
+        post: 872,
     },
     {
         id: 6,
@@ -40,6 +49,8 @@ export const allChiefs = [
         description: "비건과 글루텐프리 요리에 특화된 셰프입니다.",
         imageUrl: "/images/users/profile_6.webp",
         score: 91,
+        follow: 1258,
+        post: 772,
     },
     {
         id: 7,
@@ -47,6 +58,8 @@ export const allChiefs = [
         description: "전통 장을 활용한 깊은 맛의 요리를 선보입니다.",
         imageUrl: "/images/users/profile_7.webp",
         score: 84,
+        follow: 1032,
+        post: 673,
     },
     {
         id: 8,
@@ -54,6 +67,8 @@ export const allChiefs = [
         description: "에어프라이어 마스터, 간편함의 미학을 실현합니다.",
         imageUrl: "/images/users/profile_8.webp",
         score: 79,
+        follow: 956,
+        post: 332,
     },
     {
         id: 9,
@@ -61,6 +76,8 @@ export const allChiefs = [
         description: "지역 농산물을 활용한 슬로우푸드 전문가입니다.",
         imageUrl: "/images/users/profile_9.webp",
         score: 88,
+        follow: 938,
+        post: 299,
     },
     {
         id: 10,
@@ -68,5 +85,7 @@ export const allChiefs = [
         description: "SNS에서 화제를 모은 감각적인 요리를 합니다.",
         imageUrl: "/images/users/profile_10.webp",
         score: 92,
+        follow: 650,
+        post: 172,
     },
 ];
